@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Front-end-CMS-FSWD.git/static/css/main.cdcad929.css",
+    "main.js": "/Front-end-CMS-FSWD.git/static/js/main.e0fe9fd3.js",
+    "static/js/787.725cb19c.chunk.js": "/Front-end-CMS-FSWD.git/static/js/787.725cb19c.chunk.js",
+    "static/media/cat.png": "/Front-end-CMS-FSWD.git/static/media/cat.1ca04388c80489c3cf3a.png",
+    "index.html": "/Front-end-CMS-FSWD.git/index.html",
+    "main.cdcad929.css.map": "/Front-end-CMS-FSWD.git/static/css/main.cdcad929.css.map",
+    "main.e0fe9fd3.js.map": "/Front-end-CMS-FSWD.git/static/js/main.e0fe9fd3.js.map",
+    "787.725cb19c.chunk.js.map": "/Front-end-CMS-FSWD.git/static/js/787.725cb19c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cdcad929.css",
+    "static/js/main.e0fe9fd3.js"
+  ]
+}
