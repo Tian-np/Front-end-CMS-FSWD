@@ -3,10 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { PostsContextProvider } from "./Context/PostContext"
+import { CommentsContextProvider } from './Context/CommentsContext';
+import { CategoriesContextProvider } from './Context/CategoryContext';
+import { TagsContextProvider } from './Context/TagContext'
+import { PagesContextProvider } from './Context/PageContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PostsContextProvider>
+      <TagsContextProvider>
+        <CommentsContextProvider>
+          <CategoriesContextProvider>
+            <PagesContextProvider>
+              <App />
+            </PagesContextProvider>
+          </CategoriesContextProvider>
+        </CommentsContextProvider>
+      </TagsContextProvider>
+    </PostsContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
