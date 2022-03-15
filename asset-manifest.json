@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Front-end-CMS-FSWD/static/css/main.d7b447e6.css",
-    "main.js": "/Front-end-CMS-FSWD/static/js/main.92c776c7.js",
+    "main.css": "/Front-end-CMS-FSWD/static/css/main.53d8d280.css",
+    "main.js": "/Front-end-CMS-FSWD/static/js/main.97ea3db1.js",
     "static/js/787.725cb19c.chunk.js": "/Front-end-CMS-FSWD/static/js/787.725cb19c.chunk.js",
     "static/media/cat.png": "/Front-end-CMS-FSWD/static/media/cat.1ca04388c80489c3cf3a.png",
     "index.html": "/Front-end-CMS-FSWD/index.html",
-    "main.d7b447e6.css.map": "/Front-end-CMS-FSWD/static/css/main.d7b447e6.css.map",
-    "main.92c776c7.js.map": "/Front-end-CMS-FSWD/static/js/main.92c776c7.js.map",
+    "main.53d8d280.css.map": "/Front-end-CMS-FSWD/static/css/main.53d8d280.css.map",
+    "main.97ea3db1.js.map": "/Front-end-CMS-FSWD/static/js/main.97ea3db1.js.map",
     "787.725cb19c.chunk.js.map": "/Front-end-CMS-FSWD/static/js/787.725cb19c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7b447e6.css",
-    "static/js/main.92c776c7.js"
+    "static/css/main.53d8d280.css",
+    "static/js/main.97ea3db1.js"
   ]
 }
