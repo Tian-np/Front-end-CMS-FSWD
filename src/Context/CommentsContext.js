@@ -8,11 +8,11 @@ export const CommentsContextProvider = (props) => {
   /*const [isLoading, setIsLoading] = useState(true); */
   const [comments, setComments] = useState([]);
 
-  const createComments= (name) => {
+  const createComments = (name) => {
     console.log(name);
   };
 
-  const getComments= (commentsId) => {
+  const getComments = (commentsId) => {
     return comments.find((comments) => comments.id === commentsId);
   };
 
@@ -38,8 +38,8 @@ export const CommentsContextProvider = (props) => {
         /*isLoading,*/
         comments,
         createComments,
-        getComments      
-    }}
+        getComments,
+      }}
     >
       {props.children}
     </CommentsContext.Provider>

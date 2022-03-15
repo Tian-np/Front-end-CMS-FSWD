@@ -26,7 +26,7 @@ export const PostsContextProvider = (props) => {
     const fetchPosts = async () => {
       /* setIsLoading(true); */
       const response = await fetch(URL, {
-        method: "GET"
+        method: "GET",
       });
 
       const data = await response.json();
@@ -45,7 +45,7 @@ export const PostsContextProvider = (props) => {
         posts,
         createPost,
         getPostTitle,
-        getPostContent
+        getPostContent,
       }}
     >
       {props.children}

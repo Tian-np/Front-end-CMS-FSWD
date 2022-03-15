@@ -14,12 +14,16 @@ const Categoriespage = () => {
   return (
     <>
       {categories.map((category, index) => (
-          <Fragment key={index}>
-            <li><NavLink to={`/category/${category.slug.toLowerCase()}`}>
-              <div dangerouslySetInnerHTML={{__html: sanitize(category.slug)} }></div>
-              {/* <Categories></Categories> */}
-            </NavLink></li>
-          </Fragment>
+        <Fragment key={index}>
+          <li>
+            <NavLink to={`/category/${category.slug.toLowerCase()}`}>
+              <div
+                dangerouslySetInnerHTML={{ __html: sanitize(category.slug) }}
+              ></div>
+
+            </NavLink>
+          </li>
+        </Fragment>
       ))}
     </>
   );

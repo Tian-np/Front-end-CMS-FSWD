@@ -26,7 +26,7 @@ export const PagesContextProvider = (props) => {
     const fetchPages = async () => {
       /* setIsLoading(true); */
       const response = await fetch(URL, {
-        method: "GET"
+        method: "GET",
       });
 
       const data = await response.json();
@@ -45,7 +45,7 @@ export const PagesContextProvider = (props) => {
         pages,
         createPages,
         getPagesTitle,
-        getPagesContent
+        getPagesContent,
       }}
     >
       {props.children}

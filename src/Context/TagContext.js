@@ -20,7 +20,7 @@ export const TagsContextProvider = (props) => {
     const fetchTags = async () => {
       /* setIsLoading(true); */
       const response = await fetch(URL, {
-        method: "GET"
+        method: "GET",
       });
 
       const data = await response.json();
@@ -38,7 +38,7 @@ export const TagsContextProvider = (props) => {
         /*isLoading,*/
         tags,
         createTags,
-        getTags
+        getTags,
       }}
     >
       {props.children}

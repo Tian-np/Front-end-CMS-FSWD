@@ -8,11 +8,11 @@ export const CategoriesContextProvider = (props) => {
   /*const [isLoading, setIsLoading] = useState(true); */
   const [categories, setCategories] = useState([]);
 
-  const createCategories= (name) => {
+  const createCategories = (name) => {
     console.log(name);
   };
 
-  const getCategories= (categoriesId) => {
+  const getCategories = (categoriesId) => {
     return categories.find((categories) => categories.id === categoriesId);
   };
 
@@ -20,7 +20,7 @@ export const CategoriesContextProvider = (props) => {
     const fetchCategories = async () => {
       /* setIsLoading(true); */
       const response = await fetch(URL, {
-        method: "GET"
+        method: "GET",
       });
 
       const data = await response.json();
@@ -38,8 +38,8 @@ export const CategoriesContextProvider = (props) => {
         /*isLoading,*/
         categories,
         createCategories,
-        getCategories      
-    }}
+        getCategories,
+      }}
     >
       {props.children}
     </CategoriesContext.Provider>
