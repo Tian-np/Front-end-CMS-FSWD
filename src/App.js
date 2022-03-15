@@ -7,6 +7,7 @@ import { BrowserRouter as Router, NavLink, Switch, Route } from "react-router-do
 import Content from "./Components/Content";
 import Categories from "./Components/Categories";
 import Tagspage from "./Restaurant/tags";
+import Tags from './Components/Tags'
 function App() {
   return (
     <div className="App h-screen w-screen font-mono font-semibold text-lg">
@@ -51,73 +52,85 @@ function App() {
         <div className="h-5/6">
           <div className="h-full ">
             <Switch>
-              <Route path='/category/category-test'>
+            <Route path='/tags/brooklyn' exact>
+                <Tags />
+
+              </Route>
+              <Route path='/tags/fashion' exact>
+                <Tags />
+
+              </Route>
+              <Route path='/tags/women-3' exact>
+                <Tags />
+
+              </Route>
+              <Route path='/category/category-test' exact>
                 <Categories />
 
               </Route>
-              <Route path='/category/classic'>
+              <Route path='/category/classic' exact>
                 <Categories />
 
               </Route>
-              <Route path='/category/Runner'>
+              <Route path='/category/Runner' exact>
                 <Categories />
 
               </Route>
-              <Route path='/category/style'>
+              <Route path='/category/style' exact>
                 <Categories />
 
               </Route>
-              <Route path='/category/life'>
+              <Route path='/category/life' exact>
                 <Categories />
 
               </Route>
-              <Route path='/category/uncategorized'>
+              <Route path='/category/uncategorized' exact>
                 <Categories />
 
               </Route>
-              <Route path='/vel-est-iusto-numquam-molestiae'>
+              <Route path='/vel-est-iusto-numquam-molestiae' exact>
                 <Content />
 
               </Route>
-              <Route path='/page5'>
+              <Route path='/page5' exact>
 
               </Route>
-              <Route path='/ut-autem-iste-quo'>
+              <Route path='/ut-autem-iste-quo' exact>
               <Content />
               </Route>
-              <Route path='/iure-eligendi-impedit-voluptatum-non-omnis-asperiores-quia'>
+              <Route path='/iure-eligendi-impedit-voluptatum-non-omnis-asperiores-quia' exact>
               <Content />
               </Route>
-              <Route path='/posts-page1'>
+              <Route path='/posts-page1' exact>
 
               </Route>
 
-              <Route path='/esse-odit-ut-unde-sed-nihil'>
-              <Content />
-              </Route>
-
-              <Route path='/classic-post'>
-              <Content />
-              </Route>
-              <Route path='/id-ullam-reprehenderit-aut' >
-              <Content />
-              </Route>
-              <Route path='/maiores-est-quisquam-minus-placeat'>
-              <Content />
-              </Route>
-              <Route path='/porro-ut-ea-sequi'>
+              <Route path='/esse-odit-ut-unde-sed-nihil' exact>
               <Content />
               </Route>
 
-              <Route path="/postpage">
+              <Route path='/classic-post' exact>
+              <Content />
+              </Route>
+              <Route path='/id-ullam-reprehenderit-aut'  exact>
+              <Content />
+              </Route>
+              <Route path='/maiores-est-quisquam-minus-placeat' exact>
+              <Content />
+              </Route>
+              <Route path='/porro-ut-ea-sequi' exact>
+              <Content />
+              </Route>
+
+              <Route path="/postpage" exact>
                 <Postpage />
               </Route>
 
-              <Route path="/categories">
+              <Route path="/categories" exact>
                 <Categoriespage />
               </Route>
 
-              <Route path="/">
+              <Route path="/" exact>
                 <Homepage />
               </Route>
             </Switch>

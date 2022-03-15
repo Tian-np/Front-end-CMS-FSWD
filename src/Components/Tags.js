@@ -1,4 +1,4 @@
-import { Fragment, useContext, useState, useEffect } from "react";
+import { Fragment, useContext, useState, useEffect, useMemo } from "react";
 import { useHistory } from "react-router-dom";
 import PostsContext from "../Context/PostContext";
 import { sanitize } from "dompurify";
@@ -28,16 +28,29 @@ const Tags = (props) => {
     });
   }, [tags, location]);
 
-  const renderContent = () => {
-    return posts.map((item, index) => {
-      let { tags } = item;
 
-      if (tags?.indexOf(currentTagsId?.id) !== -1) {
+  const postWithTag = useMemo(() => {
+
+    let allPost = posts?.filter(item => {
+      
+      if (posts?.tags?.indexOf(currentTagsId.id) !== -1) {
+        return item
+      }
+    })
+
+    return allPost
+  }, [posts, tags, location])
+
+
+  const renderContent = () => {
+    return postWithTag.map((item, index) => {
+  //     // let { tags } = item;
+
+  //     // if (tags?.indexOf(currentTagsId?.id) !== -1) {
         return (
-          <Fragment>
+          <Fragment key={index}>
             <div className=" flex justify-center flex-wrap">
               <div
-                key={index}
                 className="w-full text-4xl"
                 dangerouslySetInnerHTML={{
                   __html: sanitize(item.title.rendered),
@@ -45,7 +58,6 @@ const Tags = (props) => {
               ></div>
               <div
                 className="w-1/2 text-justify"
-                key={index}
                 dangerouslySetInnerHTML={{
                   __html: sanitize(item.content.rendered),
                 }}
@@ -55,8 +67,8 @@ const Tags = (props) => {
           </Fragment>
         );
       }
-    });
-  };
+    )
+  }
 
   return (
     <>

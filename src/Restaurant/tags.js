@@ -14,7 +14,7 @@ const Tagspage = () => {
       {tags.map((tag, index) => (
         <Fragment key={index}>
           <li>
-            <NavLink to={`/tag/${tag.slug.toLowerCase()}`}>
+            <NavLink to={`/tags/${tag.slug.toLowerCase()}`}>
               <div
                 dangerouslySetInnerHTML={{ __html: sanitize(tag.slug) }}
               ></div>
