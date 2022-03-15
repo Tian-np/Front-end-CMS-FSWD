@@ -75,7 +75,7 @@ const Postpage = () => {
                   )
                 }
                 {
-                  (item?.final) && (
+                  item?.final && (
                     <div>
                       <NavLink className='text-blue-600 hover:text-blue-800 transition duration-150 cursor-pointer' to={`/${item.slug}/`}>Read more</NavLink>
                       <hr className="bg-white"/>

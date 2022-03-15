@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Tian-np.github.io/Front-end-CMS-FSWD.git",
+  "homepage": "https://Tian-np.github.io/Front-end-CMS-FSWD",
   "name": "midterm",
   "version": "0.1.0",
   "private": true,
@@ -11,7 +11,6 @@
     "axios": "^0.26.0",
     "daisyui": "^2.6.4",
     "dompurify": "^2.3.6",
-    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
@@ -46,8 +45,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
+    "gh-pages": "^3.2.3",
     "postcss": "^8.4.8",
-    "tailwindcss": "^3.0.23",
-    "gh-pages": "^3.2.3"
+    "tailwindcss": "^3.0.23"
   }
 }

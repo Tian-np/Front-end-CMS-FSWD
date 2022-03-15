@@ -32,7 +32,7 @@ const Categories = (props) => {
 
             let {categories} = item
 
-            if (categories.indexOf(currentCategoryId.id) !== -1){
+            if (categories?.indexOf(currentCategoryId?.id) !== -1){
                 return (
                     <Fragment>
                         <div className=' flex justify-center flex-wrap'>
