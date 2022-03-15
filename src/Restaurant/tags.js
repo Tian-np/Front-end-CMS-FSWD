@@ -1,4 +1,3 @@
-import CategoriesContext from "../Context/CategoryContext";
 import { sanitize } from "dompurify";
 import React, { Fragment } from "react";
 import { useContext } from "react";
@@ -19,7 +18,6 @@ const Tagspage = () => {
               <div
                 dangerouslySetInnerHTML={{ __html: sanitize(tag.slug) }}
               ></div>
-              {/* <Categories></Categories> */}
             </NavLink>
           </li>
         </Fragment>

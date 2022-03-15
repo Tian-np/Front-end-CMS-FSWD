@@ -3,9 +3,7 @@ import React from "react";
 import Homepage from "./Restaurant/homepage";
 import Postpage from "./Restaurant/postpage";
 import Categoriespage from "./Restaurant/category";
-import Commentpage from "./Restaurant/comment";
 import { BrowserRouter as Router, NavLink, Switch, Route } from "react-router-dom";
-import { Menu } from '@headlessui/react'
 import Content from "./Components/Content";
 import Categories from "./Components/Categories";
 import Tagspage from "./Restaurant/tags";

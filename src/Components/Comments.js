@@ -1,5 +1,4 @@
-import { Fragment, useContext, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useContext, useState } from "react";
 import PostsContext from "../Context/PostContext";
 import { sanitize } from "dompurify";
 import CommentsContext from "../Context/CommentsContext";
@@ -55,7 +54,6 @@ const Comments = ({ post_id }) => {
   return (
     <>
       {comments.map((comment, index) => {
-        // for (let item of getSlug){
         if (comment.post === post_id) {
           return (
             <div key={index} className="mb-3.5 w-full flex justify-center">

@@ -17,23 +17,35 @@ const Postpage = () => {
 
         posts.map((post, index) => {
 
+          // let Category = post.categories()
+          // post.categories && catHeader.push({categoryTitle: post.categories})
+          // for (let catTitle of Category){
+          //   if (catTitle('[3]') !== -1) {
+          //     catHeader.push({categoryTitle: catTitle})
+          //   } else if (catTitle('[77]')!== -1) {
+          //     catHeader.push({categoryTitle: catTitle})
+          //   } else if (catTitle('[78]')!== -1) {
+          //     catHeader.push({categoryTitle: catTitle})
+          //   }
+          // }
+
           let Pagetitle = post.content.rendered.split('\n')
           // post.title.rendered && mainHeader.push(post.title.rendered)
           post.title.rendered && mainHeader.push({title: post.title.rendered, isTitle: isTitle, slug: post.slug})
           for (let item of Pagetitle){
-                if (item.search('<h1>') !== -1) {
-                  // content.push({[`${post.title.rendered}`]: item})
-                    mainHeader.push({title: item})
-                }
-                else if (item.search('<h4>') !== -1) {
-                  // content.push({[`${post.title.rendered}`]: item})
-                    mainHeader.push({title: item})
-                }
-                else if (item.search('<p><img') !== -1){
-                  // console.log(item)
-                  mainHeader.push({img: item.slice(item.search('src') + 5, item.search('.jpg') + 4)})
-                }
-              }
+            if (item.search('<h1>') !== -1) {
+              // content.push({[`${post.title.rendered}`]: item})
+                mainHeader.push({title: item})
+            }
+            else if (item.search('<h4>') !== -1) {
+              // content.push({[`${post.title.rendered}`]: item})
+                mainHeader.push({title: item})
+            }
+            else if (item.search('<p><img') !== -1){
+              // console.log(item)
+              mainHeader.push({img: item.slice(item.search('src') + 5, item.search('.jpg') + 4)})
+            }
+          }
       })
 
       // console.log(mainHeader, content)
@@ -70,7 +82,7 @@ const Postpage = () => {
                 {
                   !item?.isTitle && (
                     <article>
-                      <div className='text-base' dangerouslySetInnerHTML={{__html: sanitize(item.title)}}></div>                
+                      <div className=' mb-2 text-lg' dangerouslySetInnerHTML={{__html: sanitize(item.title)}}></div>                
                     </article>
                   )
                 }

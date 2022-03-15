@@ -2,11 +2,10 @@ import CategoriesContext from "../Context/CategoryContext";
 import { sanitize } from "dompurify";
 import React, { Fragment } from "react";
 import { useContext } from "react";
-import Categories from "../Components/Categories";
 import { Route, Switch, NavLink } from "react-router-dom";
 
 const Categoriespage = () => {
-  const { categories, createCategories, getCategories } =
+  const { categories, createCategories } =
     useContext(CategoriesContext);
 
   createCategories("CategoriesComplete");
@@ -20,7 +19,6 @@ const Categoriespage = () => {
               <div
                 dangerouslySetInnerHTML={{ __html: sanitize(category.slug) }}
               ></div>
-
             </NavLink>
           </li>
         </Fragment>
